@@ -1,0 +1,25 @@
+{
+  "name": "guilded-controller",
+  "version": "0.0.1",
+  "description": "Control You Guilded Bot ",
+  "main": "./src/handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadiazt/Guilded-Controller.git"
+  },
+  "author": "hadi.az",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hadiazt/Guilded-Controller/issues"
+  },
+  "homepage": "https://github.com/hadiazt/Guilded-Controller#readme",
+  "keywords": [
+    "guilded",
+    "guildedapi",
+    "guilded.gg"
+  ],
+  "dependencies": {}
+}
