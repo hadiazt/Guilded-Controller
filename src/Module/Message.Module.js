@@ -16,4 +16,24 @@ module.exports.entity = (Interaction) => {
     }
 }
 
+module.exports.send = async ({ token, id, message, content }) => {
+
+    if (message.createdBy === id || message.id === id || !message?.channelId) {
+        return;
+    }
+    if (!content) {
+        console.log('Can not send an empty message');
+    }
+
+    return axios(`https://www.guilded.gg/api/v1/channels/${message?.channelId}/messages`, {
+        method: 'POST',
+        headers: {
+            Accept: "application/json",
+            "Content-type": "application/json",
+            Authorization: `Bearer ${token}`
+        },
+        data: { content }
+    });
+}
+
 
