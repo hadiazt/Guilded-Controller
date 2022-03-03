@@ -1,10 +1,10 @@
 {
   "name": "guilded-controller",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Control You Guilded Bot ",
-  "main": "./src/handler.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.test.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
     "guildedapi",
     "guilded.gg"
   ],
-  "dependencies": {}
+  "devDependencies": {
+    "axios": "^0.26.0",
+    "ws": "^8.5.0"
+  }
 }
