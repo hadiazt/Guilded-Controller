@@ -36,4 +36,22 @@ module.exports.send = async ({ token, id, message, content }) => {
     });
 }
 
+module.exports.fetch = async ({ token, id, message }) => {
+    if (message.createdBy === id || !message?.channelId) {
+        return;
+    }
 
+    return new Promise((resolve, reject) => {
+        axios(`https://www.guilded.gg/api/v1/channels/${message?.channelId}/messages`, {
+            method: 'GET',
+            headers: {
+                Accept: "application/json",
+                "Content-type": "application/json",
+                Authorization: `Bearer ${token}`
+            },
+        }).then(data => {
+            const req = data.data.messages;
+            resolve(req)
+        }).catch(e => { console.log(e?.response?.data?.message || e) });
+    });
+}
