@@ -1,0 +1,1 @@
+exports.Connect = require('./Components/Connect.module')
