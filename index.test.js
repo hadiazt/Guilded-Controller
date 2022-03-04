@@ -1,4 +1,4 @@
-const Guilded = require('./src');
+const Guilded = require('guilded-controller');
 
 const id = '';
 const token = '';
